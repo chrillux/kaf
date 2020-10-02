@@ -12,9 +12,13 @@ jobs:
       - go/load-cache
       - go/mod-download
       - go/save-cache
+      - go/test:
+          covermode: atomic
+          failfast: true
+          race: true
+
 workflows:
   build:
     jobs:
       - golangci-lint/lint
       - build
-      - go/test
