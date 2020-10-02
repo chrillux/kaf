@@ -17,3 +17,4 @@ workflows:
     jobs:
       - golangci-lint/lint
       - build
+      - go test ./...
