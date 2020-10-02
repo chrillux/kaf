@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   golangci-lint: ory/golangci@0.0.4
-  go: circleci/go@1.1.1
+  go: circleci/go@1.4.0
 jobs:
   build:
     executor:
@@ -17,4 +17,4 @@ workflows:
     jobs:
       - golangci-lint/lint
       - build
-      - go test ./...
+      - go/test
